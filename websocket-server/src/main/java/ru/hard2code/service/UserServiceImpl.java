@@ -18,10 +18,7 @@ public class UserServiceImpl
 
     @Override
     public void createUser(User user) {
-        var role =
-                userRoleRepository.findByName(UserRole.Role.USER).orElseThrow(
-                        () -> new RuntimeException("Role was not found"));
-
+        var role=new UserRole(null, UserRole.Role.USER);
         user.setRole(role);
         userRepository.save(user);
     }

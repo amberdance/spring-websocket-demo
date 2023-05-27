@@ -24,7 +24,7 @@ public class User {
     @NonNull
     private String username, email, firstName, lastName;
 
-    @MappedCollection(idColumn = "id")
+    @MappedCollection(idColumn = "user_id")
     private UserRole role;
 
     @Builder.Default
