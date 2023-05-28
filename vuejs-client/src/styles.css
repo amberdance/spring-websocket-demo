@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.el-table .success-row,
+.success-row {
+    background-color: #e3f5ec !important;
+}
+
+.el-table .danger-row,
+.danger-row {
+    background-color: #ff00001a;
+}
+
+.el-table .warning-row,
+.warning-row {
+    background-color: #e6e13c87;
+}
+
+.el-table .new-row,
+.new-row,
+.inactive-row {
+    background-color: #f5f7fa;
+}
+
+.el-table .inactive-row,
+.inactive-row {
+    background-color: #e2e2e2;
+}
+
+.el-table__row.expanded td {
+    border-bottom: none;
+}
+
+.el-table .cell {
+    word-break: break-word !important;
+}
+
+.el-table .new-row:hover {
+    color: black !important;
+}
+
+table thead tr th {
+    background-color: #182140 !important;
+}
+
+table thead tr th,
+table td {
+    font-weight: bold;
+}
+
+table thead tr th,
+table thead tr th i {
+    color: #ffffff !important;
+}
