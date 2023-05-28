@@ -1,4 +1,4 @@
-package ru.hard2code.domain.model;
+package ru.hard2code.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.MappedCollection;
 import org.springframework.data.relational.core.mapping.Table;
 
 @Table("users")
@@ -24,8 +23,8 @@ public class User {
     @NonNull
     private String username, email, firstName, lastName;
 
-    @MappedCollection(idColumn = "user_id")
-    private UserRole role;
+    @Builder.Default
+    private Role role = Role.USER;
 
     @Builder.Default
     private boolean enabled = true;
