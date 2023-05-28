@@ -17,7 +17,7 @@ public class UsersWebSocketConfig implements WebSocketConfigurer {
     @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler(webSocketHandler, "/ws/users")
-                .setAllowedOrigins("http://localhost:8181");
+                .setAllowedOrigins("http://localhost:8080");
     }
 
 

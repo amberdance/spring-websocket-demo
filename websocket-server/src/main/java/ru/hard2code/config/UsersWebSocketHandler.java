@@ -71,9 +71,12 @@ public class UsersWebSocketHandler extends TextWebSocketHandler {
             var user = userService.createRandomUser();
 
             for (var session : sessions) {
-                log.info("Sending created user to: {}", session);
-                session.sendMessage(
-                        new TextMessage(objectMapper.writeValueAsBytes(user)));
+                if (session.isOpen()) {
+                    log.info("Sending created user to: {}", session);
+                    session.sendMessage(
+                            new TextMessage(
+                                    objectMapper.writeValueAsBytes(user)));
+                }
             }
 
         } catch (Exception e) {
